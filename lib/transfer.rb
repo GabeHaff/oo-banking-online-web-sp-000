@@ -17,9 +17,9 @@ def execute_transaction
  if self.valid? && @amount < @sender.balance
  @sender.balance = @sender.balance - @amount
  @receiver.balance = @receiver.balance + @amount 
- @status == "complete"
+ self.status == "complete"
  else 
-   @status == "rejected"
+   self.status == "rejected"
   
   #- can execute a successful transaction between two accounts (FAILED - 1)
    # each transfer can only happen once (FAILED - 2)
