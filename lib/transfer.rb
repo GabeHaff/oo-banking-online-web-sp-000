@@ -18,8 +18,7 @@ def execute_transaction
  @sender.balance = @sender.balance - @amount
  @receiver.balance = @receiver.balance + @amount 
  self.status == "complete"
- elsif 
- 
+ elsif sender.valid? == false
    self.status == "rejected"
   
   #- can execute a successful transaction between two accounts (FAILED - 1)
