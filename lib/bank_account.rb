@@ -5,7 +5,7 @@ class BankAccount
   #expect: can transfer money to another BankAccount, using Transfer class.
 
 
-def initialize(name#, balance=1000, status="open")
+def initialize(name)#, balance=1000, status="open")
   @name = name
   @balance = 1000
   @status = "open"
