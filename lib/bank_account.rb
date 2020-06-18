@@ -12,9 +12,12 @@ def initialize(name, balance=1000, status="open")
 end 
 #initializes w/name, balance of 1000, status of "open", name cannot be changed. 
 
+def deposit_amount=(deposit_amount)
+  @deposit_amount = deposit_amount
+end 
 
 def deposit(deposit_amount)
-  @balance + @deposit_amount
+@balance << deposit_amount
   
 #define_method(:deposit) do 
   #@balance += deposit_amount
