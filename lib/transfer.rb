@@ -16,21 +16,18 @@ end
 def execute_transaction
  
  
+ if @sender.valid? && @receiver.valid? && @sender.balance > @amount && @status == "pending"
+      @sender.balance -= @amount
+      @receiver.balance += @amount
+      @status = "complete"
+    else
+      @status = "rejected"
+      return "Transaction rejected. Please check your account balance."
+    end
+  end
  
  
- 
- #if self.valid? && self.amount < @sender.balance && @status =="pending"
-if @sender.valid? && @receiver.valid? && @sender.balance > @amount && @sender.status == "pending" && @receiver.status == pending
- @sender.balance = @sender.balance - @amount
-
- @receiver.balance = @receiver.balance + @amount 
- 
- self.status == "complete"
- else 
-   @status == "rejected"
-   puts "Transaction rejected. Please check your account balance."
-  
-  #- can execute a successful transaction between two accounts (FAILED - 1)
+ #- can execute a successful transaction between two accounts (FAILED - 1)
    # each transfer can only happen once (FAILED - 2)
     #rejects a transfer if the sender does not have enough funds (does not have a valid account) (FAILED - 3)
   #the transaction from sender, add it to receiver account
