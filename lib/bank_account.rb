@@ -12,27 +12,14 @@ def initialize(name, balance=1000, status="open")
 end 
 #initializes w/name, balance of 1000, status of "open", name cannot be changed. 
 
-#def deposit_amount=(deposit_amount)
-  #@deposit_amount = deposit_amount
-#end 
+ 
 
 def deposit(deposit_amount)
 @balance+= deposit_amount
-  
-#define_method(:deposit) do 
-  #@balance += deposit_amount
- #end 
-#end 
 end 
 
-#describe '#deposit' do ##define_method("deposit")
-    #it "can deposit money into its account" do
-     # expect(avi.balance).to eq(1000)
-      #avi.deposit(1000)
-     # expect(avi.balance).to eq(2000)
-
- #deposit
-    #can deposit money into its account (FAILED - 1)
+def display_balance 
+  puts {
   #display_balance
     #can display its balance (FAILED - 2)
   #valid?
