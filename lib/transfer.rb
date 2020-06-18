@@ -18,7 +18,10 @@ def execute_transaction
  @sender.balance = @sender.balance - @amount
  @reciver.balance = @receiver.balance + @amount 
   
-  #- the transaction from sender, add it to receiver account
+  #- can execute a successful transaction between two accounts (FAILED - 1)
+   # each transfer can only happen once (FAILED - 2)
+    #rejects a transfer if the sender does not have enough funds (does not have a valid account) (FAILED - 3)
+  #the transaction from sender, add it to receiver account
 end 
 end
 
