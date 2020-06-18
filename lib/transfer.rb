@@ -20,6 +20,7 @@ def execute_transaction
   
   #- the transaction from sender, add it to receiver account
 end 
+end
 
 end #class end 
 
