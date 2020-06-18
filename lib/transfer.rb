@@ -35,8 +35,6 @@ def execute_transaction
   #reverse_transfer
    # can reverse a transfer between two accounts (FAILED - 4)
    # it can only reverse executed transfers 
-end 
-end
 
 end #class end 
 
