@@ -1,7 +1,7 @@
 require 'pry'
 class BankAccount
   attr_reader :name
-  attr_accessor :balance, :status
+  attr_accessor :balance, :status, :deposit
   #expect: can transfer money to another BankAccount, using Transfer class.
 
 
