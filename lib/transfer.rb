@@ -15,13 +15,13 @@ end
 
 def execute_transaction
  #if self.valid? && self.amount < @sender.balance && @status =="pending"
-if sender.valid? && receiver.valid? && sender.balance > @amount sender.status == "pending" && receiver.status == pending
+if @sender.valid? && @receiver.valid? && @sender.balance > @amount && @sender.status == "pending" && @receiver.status == pending
  @sender.balance = @sender.balance -= @amount
 
  @receiver.balance = @receiver.balance += @amount 
  
  self.status == "complete"
- if !sender.valid? 
+ if !sender.valid? || 
    @status == "rejected"
    puts "Transaction rejected. Please check your account balance."
   
