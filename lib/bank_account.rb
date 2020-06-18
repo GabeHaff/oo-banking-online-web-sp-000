@@ -19,7 +19,7 @@ def deposit(deposit_amount)
 end 
 
 def display_balance 
-  puts "Your balance is $ #@balance."
+  puts "Your balance is $ #<@balance."
 end 
   #display_balance
     #can display its balance (FAILED - 2)
