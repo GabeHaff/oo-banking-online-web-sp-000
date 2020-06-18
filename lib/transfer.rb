@@ -14,8 +14,9 @@ sender.valid? && receiver.valid?
 end
 
 def execute_transaction
- 
-  @sender.balance - @amount @receiver.balance + @amount 
+ if self.valid? 
+ @sender.balance = @sender.balance - @amount
+ @reciver.balance = @receiver.balance + @amount 
   
   #- the transaction from sender, add it to receiver account
 end 
