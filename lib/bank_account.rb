@@ -1,7 +1,7 @@
 require 'pry'
 class BankAccount
   attr_reader :name
-  attr_accessor :balance, :status, :deposit
+  attr_accessor :balance, :status, :deposit_amount
   #expect: can transfer money to another BankAccount, using Transfer class.
 
 
@@ -12,11 +12,15 @@ def initialize(name)
 end 
 #initializes w/name, balance of 1000, status of "open", name cannot be changed. 
 
+
+def deposit(deposit_amount)
+ do @balance + @deposit_amount
+  
 #define_method(:deposit) do 
-  #@balance += transaction amount ... transfer.amount?
+  #@balance += deposit_amount
  #end 
 #end 
-
+end 
 
 #describe '#deposit' do ##define_method("deposit")
     #it "can deposit money into its account" do
