@@ -14,7 +14,7 @@ sender.valid? && receiver.valid?
 end
 
 def execute_transaction
- if self.valid? && @amount < @sender.balance
+ if self.valid? && sender.valid? && @amount < @sender.balance
  @sender.balance = @sender.balance - @amount
  @receiver.balance = @receiver.balance + @amount 
  self.status == "complete"
