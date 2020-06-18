@@ -8,7 +8,7 @@ def initialize(sender, receiver, status="pending", amount)
   @amount = amount
   end 
 
-def valid?(sender,receiver)
+def valid?
 sender.valid? && receiver.valid?
   
 #define_method "valid?" for attr sender, receiver
