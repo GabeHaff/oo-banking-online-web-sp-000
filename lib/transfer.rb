@@ -26,6 +26,9 @@ def execute_transaction
   
   def reverse_transfer
     if @status == "complete"
+      @sender.balance += @amount
+      @receiver.balance -= @amount
+      @status == "reversed"
  
  
  #- can execute a successful transaction between two accounts (FAILED - 1)
