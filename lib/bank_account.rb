@@ -1,7 +1,7 @@
 require 'pry'
 class BankAccount
   attr_reader :name
-  attr_accessor :balance, :status, :deposit_amount
+  attr_accessor :balance, :status
   #expect: can transfer money to another BankAccount, using Transfer class.
 
 
@@ -28,9 +28,11 @@ end
 def valid? 
  @status == "open" && @balance > 0 
   end 
- 
-  #valid?
-    #is valid with an open status and a balance greater than 0 (FAILED - 3)
+
+def close_account 
+  @status = "closed"
+end 
+  
   #close_account
    # can close its account (FAILED - 4)
 
