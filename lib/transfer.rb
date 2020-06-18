@@ -10,12 +10,11 @@ def initialize(sender, receiver, status="pending", amount)
 
 def valid?
 sender.valid? && receiver.valid?
-  
-#define_method "valid?" for attr sender, receiver
-#if sender.valid? == true && receiver.valid? == true, == valid
-#BankAccount.sender.valid? &&BankAccount.receiver.valid?
 end
 
+def execute_transaction
+  
+end 
 
 end #class end 
 
