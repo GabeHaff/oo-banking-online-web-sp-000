@@ -21,7 +21,7 @@ if @sender.valid? && @receiver.valid? && @sender.balance > @amount && @sender.st
  @receiver.balance = @receiver.balance += @amount 
  
  self.status == "complete"
- if !sender.valid? || 
+ else 
    @status == "rejected"
    puts "Transaction rejected. Please check your account balance."
   
