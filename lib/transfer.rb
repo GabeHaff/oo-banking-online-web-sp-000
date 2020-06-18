@@ -14,8 +14,6 @@ sender.valid? && receiver.valid?
 end
 
 def execute_transaction
- 
- 
  if @sender.valid? && @receiver.valid? && @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount
       @receiver.balance += @amount
@@ -25,6 +23,9 @@ def execute_transaction
       return "Transaction rejected. Please check your account balance."
     end
   end
+  
+  def reverse_transfer
+    if @status == "complete"
  
  
  #- can execute a successful transaction between two accounts (FAILED - 1)
