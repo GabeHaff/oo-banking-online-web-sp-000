@@ -14,7 +14,7 @@ sender.valid? && receiver.valid?
 end
 
 def execute_transaction
- if self.valid? 
+ if self.valid? && @amount < @sender.balance
  @sender.balance = @sender.balance - @amount
  @reciver.balance = @receiver.balance + @amount 
   
@@ -22,6 +22,10 @@ def execute_transaction
    # each transfer can only happen once (FAILED - 2)
     #rejects a transfer if the sender does not have enough funds (does not have a valid account) (FAILED - 3)
   #the transaction from sender, add it to receiver account
+  
+  #reverse_transfer
+   # can reverse a transfer between two accounts (FAILED - 4)
+   # it can only reverse executed transfers 
 end 
 end
 
