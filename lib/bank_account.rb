@@ -14,7 +14,7 @@ end
 
 
 def deposit(deposit_amount)
- do @balance + @deposit_amount
+  @balance + @deposit_amount
   
 #define_method(:deposit) do 
   #@balance += deposit_amount
