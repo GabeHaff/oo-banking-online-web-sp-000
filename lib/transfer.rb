@@ -12,8 +12,10 @@ def valid?
 sender.valid? && receiver.valid?
 end
 
-def execute_transaction
+def execute_transaction(amount)
+  sender.balance -=@amount && receiver.deposit(amount)
   
+  #- the transaction from sender, add it to receiver account
 end 
 
 end #class end 
